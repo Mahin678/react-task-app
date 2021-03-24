@@ -7,7 +7,7 @@ const Users = () => {
 		fetch(`https://examplebd.com/api/live-classes?user_id=10089`, {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify(event),
+			body: JSON.stringify(event.target.value),
 		})
 			.then((res) => res.json())
 			.then((result) => {
@@ -19,7 +19,7 @@ const Users = () => {
 	console.log(data);
 
 
-	
+
 	return (
 		<div className="container">
 			<h1>Users</h1>
